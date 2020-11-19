@@ -1,0 +1,1031 @@
+
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="shortcut icon" href="images/icon/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="images/icon/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="images/icon/favicon.ico"/>
+<link rel="apple-touch-icon-precomposed" href="images/icon/favicon.ico"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="css/contacts.css" type="text/css">
+<link rel="stylesheet" href="css/search.css" type="text/css">
+<link rel="stylesheet" href="css/Menu.css" type="text/css">
+		
+<title id="lanxtitle">Lanx media</title> 
+<script>
+	
+	var menuOpen = false;
+	var seeOpen = false;
+	var conOpen = false;
+	var tock = 1;
+	var l = ["About", "Crew", "Packages", "Internships", "Audio", "Filmographer", "Stratagists", "Contracted"];
+	var b = ["Services", "Case Studies", "OneOffs", "Sub Contracts", "Visual", "Editing", "Researchers",  "Special Deal"];
+	var r = ["Careers", "Portfolio", "Custom", "Perminant", "Marketing", "Graphics", "Legal",  "Un-Contracted"];
+	var s = ["","About","Crew", "Services", "Packages", "Careers"];
+	var x = 0;
+	var q= 0;
+	var tick = 0; 
+	var glow = 0;
+	var grow = 0;
+	var consee = false;
+	var nlPage = false;
+	var nbPage = false;
+	var nrPage = false;
+	var pagenl=["about.php", "crew.php", "packages.php", "internships.php", "audio.php", "filmographer.php", "stratagists.php", "contracted.php"];
+	var pagenb=["services.php", "casestudies.php", "one_offs.php", "subcontracts.php", "visual.php", "editing.php", "researchers.php" , "uncontracted.php"];
+	var pagenr=["careers.php", "portfolio.php", "custom.php", "perminant.php", "marketing.php", "graphics.php", "legal.php" , "specialdeal"];
+	
+	function subMenuHover(value){
+		if(value==1){
+			tick=0;
+				document.getElementById('lf').style.animationName = "nothing";
+ 				document.getElementById('rf').style.animationName = "nothing";
+ 				document.getElementById('bf').style.animationName = "nothing";
+ 				document.getElementById('lf').style.fill = "#DA0000";
+ 				document.getElementById('bf').style.fill = "#000000";
+ 				document.getElementById('rf').style.fill = "#000000";
+		}
+		if (value==2) {
+			tick=0;
+				document.getElementById('lf').style.animationName = "nothing";
+ 				document.getElementById('rf').style.animationName = "nothing";
+ 				document.getElementById('bf').style.animationName = "nothing";
+ 				document.getElementById('rf').style.fill = "#DA0000";
+ 				document.getElementById('lf').style.fill = "#000000";
+ 				document.getElementById('bf').style.fill = "#000000";
+		}
+		if (value==0) {
+			tick=0;
+				document.getElementById('lf').style.animationName = "nothing";
+ 				document.getElementById('rf').style.animationName = "nothing";
+ 				document.getElementById('bf').style.animationName = "nothing";
+ 				document.getElementById('bf').style.fill = "#DA0000";
+ 				document.getElementById('rf').style.fill = "#000000";
+ 				document.getElementById('lf').style.fill = "#000000";
+		}
+		if (value==4) {
+			tick=1;
+				document.getElementById('rf').style.fill = "#000000";
+ 				document.getElementById('bf').style.fill = "#000000";
+ 				document.getElementById('lf').style.fill = "#000000";
+		}
+	}
+	function subMenuBlink(){
+		
+		t = setInterval(function(){
+ 			if (tick==1){
+ 			
+ 			if(tock == 1){
+ 				document.getElementById('lf').style.animationName = "blink";
+ 				document.getElementById('rf').style.animationName = "nothing";
+ 				document.getElementById('bf').style.animationName = "nothing";
+ 				tock = 2;
+ 			}
+ 			else if(tock == 2){
+ 				document.getElementById('bf').style.animationName = "blink";
+ 				document.getElementById('lf').style.animationName = "nothing";
+ 				document.getElementById('rf').style.animationName = "nothing";
+ 				tock = 0;
+
+ 			}
+ 			else if(tock == 0){
+ 				document.getElementById('rf').style.animationName = "blink";
+ 				document.getElementById('bf').style.animationName = "nothing";
+ 				document.getElementById('lf').style.animationName = "nothing";
+ 				tock = 1;
+ 			}
+ 			}
+ 			else if (tick==0){
+ 				tock=1;
+ 			}
+ 			}, 1500);
+	
+	
+	}
+	function openMain(value){
+			if(value==0){
+					if (menuOpen == false) {
+						tick=1;
+						x=0;
+						
+							document.getElementById('lb').style.animationName = "nothing";
+							document.getElementById('leftmenu').style.display = "inline";
+							document.getElementById('rightmenu').style.display = "inline";
+							document.getElementById('bottommenu').style.display = "inline";
+							document.getElementById('leftTxt').innerHTML = l[x];
+							document.getElementById('rightTxt').innerHTML = r[x];
+							document.getElementById('bottomTxt').innerHTML = b[x];
+							menuOpen = true;
+							resize();
+							closecontact();
+							closeSearch();
+					}
+					else if (menuOpen == true) {
+						closeMain();
+					}
+			}
+			if(value == 1){
+					if(x==0){
+						x=1;
+						q=1;
+						document.getElementById('leftTxt').innerHTML = l[x];
+						document.getElementById('rightTxt').innerHTML = r[x];
+						document.getElementById('bottomTxt').innerHTML = b[x];
+						document.getElementById('lanx').style.display = "none";
+						document.getElementById('media').style.display = "none";
+						document.getElementById('heads').innerHTML = s[q];
+						document.getElementById('heads2').innerHTML = s[q];
+						resize();
+
+						
+					}
+					else if(x==1){
+						x=4;
+						q=2;
+						document.getElementById('leftTxt').innerHTML = l[x];
+						document.getElementById('rightTxt').innerHTML = r[x];
+						document.getElementById('bottomTxt').innerHTML = b[x];
+						document.getElementById('lanx').style.display = "none";
+						document.getElementById('media').style.display = "none";
+						document.getElementById('heads').innerHTML = s[q];
+						document.getElementById('heads2').innerHTML = s[q];
+						resize();
+						
+					}
+					else if(x==2){
+							x=7;
+							q=4;
+							document.getElementById('leftTxt').innerHTML = l[x];
+							document.getElementById('rightTxt').innerHTML = r[x];
+							document.getElementById('bottomTxt').innerHTML = b[x];
+							document.getElementById('lanx').style.display = "none";
+							document.getElementById('media').style.display = "none";
+							document.getElementById('heads').innerHTML = s[q];
+							document.getElementById('heads2').innerHTML = s[q];
+							resize();					
+					}
+					else if(x==3){
+							lPage(event);					
+					}
+					else if(x==4){
+							lPage(event);					
+					}
+					else if(x==7){
+							lPage(event);					
+					}
+
+			}
+			if(value == 3){
+					if(x==0){
+						x=2;
+						q=3;
+						document.getElementById('leftTxt').innerHTML = l[x];
+						document.getElementById('rightTxt').innerHTML = r[x];
+						document.getElementById('bottomTxt').innerHTML = b[x];
+						document.getElementById('lanx').style.display = "none";
+						document.getElementById('media').style.display = "none";
+						document.getElementById('heads').innerHTML = s[q];
+						document.getElementById('heads2').innerHTML = s[q];
+						resize();
+						
+					}
+					else if(x==2){
+						bPage(event);
+						
+					}
+					else if(x==1){
+							bPage(event);					
+					}
+					
+					else if(x==3){
+							bPage(event);					
+					}
+					else if(x==4){
+							bPage(event);					
+					}
+					else if(x==7){
+							bPage(event);					
+					}
+					
+			}
+			if(value == 2){
+					if(x==0){
+						x=3;
+						q=5;
+						document.getElementById('leftTxt').innerHTML = l[x];
+						document.getElementById('rightTxt').innerHTML = r[x];
+						document.getElementById('bottomTxt').innerHTML = b[x];
+						document.getElementById('lanx').style.display = "none";
+						document.getElementById('media').style.display = "none";
+						document.getElementById('heads').innerHTML = s[q];
+						document.getElementById('heads2').innerHTML = s[q];
+						resize();
+						
+					}
+					else if(x==1){
+							rPage(event);					
+					}
+					else if(x==2){
+							rPage(event);					
+					}
+					else if(x==3){
+							rPage(event);					
+					}
+					else if(x==4){
+							rPage(event);					
+					}
+					else if(x==7){
+							rPage(event);					
+					}
+
+
+			}			
+	}
+
+	function closeMain(){
+			x=0;
+			q=0;
+			document.getElementById('lb').style.animationName = "pulse";
+			document.getElementById('heads').innerHTML = s[q];
+			document.getElementById('heads2').innerHTML = s[q];
+			document.getElementById('leftmenu').style.display = "none";
+			document.getElementById('rightmenu').style.display = "none";
+			document.getElementById('bottommenu').style.display = "none";
+			document.getElementById('lanx').style.display = "inline";
+			document.getElementById('media').style.display = "inline";
+			menuOpen = false;
+			tick =0;
+	}
+
+	function contactOpen(){
+		if(conOpen==false){
+
+			document.getElementById('tele').style.color = "rgb(0,255,0)";
+			document.getElementById('tele').style.animationName = "flipPhone";
+			document.getElementById('telephone').style.animationName = "flipPhone";
+			document.getElementById('conMenu').style.display = "inline";
+	 		consee = true;
+			conOpen=true;
+			closeSearch();
+			closeMain();
+
+		}
+		else if(conOpen==true){
+			closecontact();
+
+		}
+	}
+	function closecontact(){
+	 if (consee==true){
+	 	document.getElementById('tele').style.color = "red";
+		document.getElementById('tele').style.transform = "rotateZ(-135deg)";
+		document.getElementById('telephone').style.transform = "rotateZ(-135deg)";
+		document.getElementById('conMenu').style.display = "none";
+		document.getElementById('tele').style.animationName = "flipBack";
+		document.getElementById('telephone').style.animationName = "flipBack";
+			conOpen=0;
+	 }
+	 else if (consee==false){
+
+	 }
+	}
+	function resize(){
+		var screenWidth = screen.width;
+			var ll = l[x].length;
+			var bl = b[x].length;
+			var rl = r[x].length;
+			var sl = s[q].length;
+				//left menu
+			if(screenWidth>=450){
+				if (sl == 5) {
+					document.getElementById('heads').style.transform ="translateX(-12px) translateY(-5px)";
+					document.getElementById('heads').style.fontSize ="38px";
+					document.getElementById('heads2').style.transform ="translateX(-12px) translateY(-5px)";
+					document.getElementById('heads2').style.fontSize ="38px";
+				}
+				if (sl == 4) {
+					document.getElementById('heads').style.transform ="translateX(-5px) translateY(-5px)";
+					document.getElementById('heads').style.fontSize ="40px";
+					document.getElementById('heads2').style.transform ="translateX(-5px) translateY(-5px)";
+					document.getElementById('heads2').style.fontSize ="40px";
+				}
+				if (sl == 7) {
+					document.getElementById('heads').style.transform ="translateX(-25px) translateY(-5px)";
+					document.getElementById('heads').style.fontSize ="35px";
+					document.getElementById('heads2').style.transform ="translateX(-25px) translateY(-5px)";
+					document.getElementById('heads2').style.fontSize ="35px";
+				}
+				if (sl == 8) {
+					document.getElementById('heads').style.transform ="translateX(-27px) translateY(-5px)";
+					document.getElementById('heads').style.fontSize ="30px";
+					document.getElementById('heads2').style.transform ="translateX(-27px) translateY(-5px)";
+					document.getElementById('heads2').style.fontSize ="30px";
+				}
+				
+				if (ll == 4){
+					document.getElementById('leftTxt').style.transform ="translateX(55px)";
+					document.getElementById('leftTxt').style.fontSize ="32px";
+				}
+				if (ll == 5){
+					document.getElementById('leftTxt').style.transform ="translateX(50px)";
+					document.getElementById('leftTxt').style.fontSize ="32px";
+				}
+				if (ll == 8){
+					document.getElementById('leftTxt').style.transform ="translateX(25px)";
+					document.getElementById('leftTxt').style.fontSize ="32px";
+				}
+				if (ll == 10){
+					document.getElementById('leftTxt').style.transform ="translateX(20px)";
+					document.getElementById('leftTxt').style.fontSize ="25px";
+				}
+				if (ll == 11){
+					document.getElementById('leftTxt').style.transform ="translateX(15px)";
+					document.getElementById('leftTxt').style.fontSize ="25px";
+				}
+				if (ll == 7){
+					document.getElementById('leftTxt').style.transform ="translateX(35px)";
+					document.getElementById('leftTxt').style.fontSize ="32px";
+				}
+				if (ll == 12){
+					document.getElementById('leftTxt').style.transform ="translateX(10px)";
+					document.getElementById('leftTxt').style.fontSize ="25px";
+				}
+				//right menu
+				if (rl == 7){
+					document.getElementById('rightTxt').style.transform ="translateX(33px)";
+					document.getElementById('rightTxt').style.fontSize ="32px";
+				}
+				if (rl == 9){
+					document.getElementById('rightTxt').style.transform ="translateX(18px)";
+					document.getElementById('rightTxt').style.fontSize ="30px";
+				}
+				if (rl == 6){
+						document.getElementById('rightTxt').style.transform ="translateX(38px)";
+						document.getElementById('rightTxt').style.fontSize ="32px";
+					}
+				if (rl == 8){
+					document.getElementById('rightTxt').style.transform ="translateX(25px)";
+					document.getElementById('rightTxt').style.fontSize ="32px";
+				}
+				if (rl == 13){
+					document.getElementById('rightTxt').style.transform ="translateX(25px) translateY(-10px)";
+					document.getElementById('rightTxt').style.fontSize ="24px";
+				}
+				if (rl == 5){
+					document.getElementById('rightTxt').style.transform ="translateX(51px) ";
+					document.getElementById('rightTxt').style.fontSize ="32px";
+				}
+				if (bl == 8){
+					document.getElementById('bottomTxt').style.transform ="translateX(9px) translateY(0px)";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 6){
+					document.getElementById('bottomTxt').style.transform ="translateX(27px) translateY(0px)";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 7){
+					document.getElementById('bottomTxt').style.transform ="translateX(17px) translateY(0px)";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				//not done yet
+				if (bl == 12){
+					document.getElementById('bottomTxt').style.transform ="translateX(20px) translateY(-10px)";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 9){
+					document.getElementById('bottomTxt').style.transform ="translateX(9px) translateY(0px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 11){
+					document.getElementById('bottomTxt').style.transform ="translateX(17px) translateY(0px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 13){
+					document.getElementById('bottomTxt').style.transform ="translateX(3px) translateY(-15px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					
+					document.getElementById('bottomTxt').style.fontSize ="28px";
+				}
+			}
+			else if(screenWidth>=360&&screenWidth<=449){
+				if (sl == 5) {
+					document.getElementById('heads').style.transform ="translateX(-0px)";
+					document.getElementById('heads').style.fontSize ="30px";
+					document.getElementById('heads2').style.transform ="translateX(-0px)";
+					document.getElementById('heads2').style.fontSize ="30px";
+					document.getElementById('heads').style.top = "20px";
+					document.getElementById('heads2').style.top = "20px";
+				}
+				if (sl == 4) {
+					document.getElementById('heads').style.transform ="translateX(6px)";
+					document.getElementById('heads').style.fontSize ="30px";
+					document.getElementById('heads2').style.transform ="translateX(6px)";
+					document.getElementById('heads2').style.fontSize ="30px";
+					document.getElementById('heads').style.top = "20px";
+					document.getElementById('heads2').style.top = "20px";
+				}
+				if (sl == 7) {
+					document.getElementById('heads').style.transform ="translateX(-5px)";
+					document.getElementById('heads').style.fontSize ="23px";
+					document.getElementById('heads2').style.transform ="translateX(-5px)";
+					document.getElementById('heads2').style.fontSize ="23px";
+				}
+				if (sl == 8) {
+					document.getElementById('heads').style.transform ="translateX(-5px)";
+					document.getElementById('heads').style.top = "30px";
+					document.getElementById('heads').style.fontSize ="20px";
+					document.getElementById('heads2').style.transform ="translateX(-5px)";
+					document.getElementById('heads2').style.top = "30px";
+					document.getElementById('heads2').style.fontSize ="20px";
+				}
+				if (ll == 4){
+					document.getElementById('leftTxt').style.transform ="translateX(55px)";
+					document.getElementById('leftTxt').style.fontSize ="30px";
+				}
+				if (ll == 5){
+					document.getElementById('leftTxt').style.transform ="translateX(50px)";
+					document.getElementById('leftTxt').style.fontSize ="30px";
+				}
+				if (ll == 8){
+					document.getElementById('leftTxt').style.transform ="translateX(40px)";
+					document.getElementById('leftTxt').style.fontSize ="24px";
+				}
+				if (ll == 11){
+					document.getElementById('leftTxt').style.transform ="translateX(35px)";
+					document.getElementById('leftTxt').style.fontSize ="18px";
+				}
+				if (ll == 7){
+					document.getElementById('leftTxt').style.transform ="translateX(35px)";
+					document.getElementById('leftTxt').style.fontSize ="30px";
+				}
+				if (ll == 12){
+					document.getElementById('leftTxt').style.transform ="translateX(10px)";
+					document.getElementById('leftTxt').style.fontSize ="25px";
+				}
+				//right menu
+				if (rl == 7){
+					document.getElementById('rightTxt').style.transform ="translateX(40px)";
+					document.getElementById('rightTxt').style.fontSize ="27px";
+				}
+				if (rl == 9){
+					document.getElementById('rightTxt').style.transform ="translateX(18px)";
+					document.getElementById('rightTxt').style.fontSize ="30px";
+				}
+				if (rl == 6){
+						document.getElementById('rightTxt').style.transform ="translateX(40px)";
+						document.getElementById('rightTxt').style.fontSize ="30px";
+					}
+				if (rl == 8){
+					document.getElementById('rightTxt').style.transform ="translateX(25px)";
+					document.getElementById('rightTxt').style.fontSize ="30px";
+				}
+				if (rl == 5){
+					document.getElementById('rightTxt').style.transform ="translateX(51px)";
+					document.getElementById('rightTxt').style.fontSize ="30px";
+				}
+				if (rl == 9){
+					document.getElementById('rightTxt').style.transform ="translateX(41px)";
+					document.getElementById('rightTxt').style.fontSize ="21px";
+				}
+				if (bl == 8){
+					document.getElementById('bottomTxt').style.transform ="translateX(26px)";
+					document.getElementById('bottomTxt').style.top ="78px";
+					document.getElementById('bottomTxt').style.fontSize ="23px";
+				}
+				if (bl == 6){
+					document.getElementById('bottomTxt').style.transform ="translateX(27px)";
+					document.getElementById('bottomTxt').style.top ="78px";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 7){
+					document.getElementById('bottomTxt').style.transform ="translateX(29px)";
+					document.getElementById('bottomTxt').style.top ="78px";
+					document.getElementById('bottomTxt').style.fontSize ="25px";
+				}
+				//not done yet
+				if (bl == 12){
+					document.getElementById('bottomTxt').style.transform ="translateX(33px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.top ="70px";
+					document.getElementById('bottomTxt').style.fontSize ="23px";
+				}
+				if (bl == 9){
+					document.getElementById('bottomTxt').style.transform ="translateX(9px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 11){
+					document.getElementById('bottomTxt').style.transform ="translateX(17px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.top ="74px";
+					document.getElementById('bottomTxt').style.fontSize ="30px";
+				}
+				if (bl == 13){
+					document.getElementById('bottomTxt').style.transform ="translateX(27px)";
+					document.getElementById('bottomTxt').style.textAlign = "center";
+					document.getElementById('bottomTxt').style.top ="72px";
+					document.getElementById('bottomTxt').style.fontSize ="20px";
+				}
+			}
+			else if(screenWidth<=349){
+				if (sl == 5) {
+					document.getElementById('heads').style.transform ="translateX(-0px)";
+					document.getElementById('heads').style.fontSize ="30px";
+					document.getElementById('heads2').style.transform ="translateX(-0px)";
+					document.getElementById('heads2').style.fontSize ="30px";
+					document.getElementById('heads').style.top = "20px";
+					document.getElementById('heads2').style.top = "20px";
+				}
+				if (sl == 4) {
+					document.getElementById('heads').style.transform ="translateX(6px)";
+					document.getElementById('heads').style.fontSize ="30px";
+					document.getElementById('heads2').style.transform ="translateX(6px)";
+					document.getElementById('heads2').style.fontSize ="30px";
+					document.getElementById('heads').style.top = "20px";
+					document.getElementById('heads2').style.top = "20px";
+				}
+				if (sl == 7) {
+					document.getElementById('heads').style.transform ="translateX(-5px)";
+					document.getElementById('heads').style.fontSize ="23px";
+					document.getElementById('heads2').style.transform ="translateX(-5px)";
+					document.getElementById('heads2').style.fontSize ="23px";
+				}
+				if (sl == 8) {
+					document.getElementById('heads').style.transform ="translateX(-5px)";
+					document.getElementById('heads').style.top = "30px";
+					document.getElementById('heads').style.fontSize ="20px";
+					document.getElementById('heads2').style.transform ="translateX(-5px)";
+					document.getElementById('heads2').style.top = "30px";
+					document.getElementById('heads2').style.fontSize ="20px";
+				}
+					if (ll == 4){
+						document.getElementById('leftTxt').style.transform ="translateX(62px)";
+						document.getElementById('leftTxt').style.fontSize ="27px";
+					}
+					if (ll == 5){
+						document.getElementById('leftTxt').style.transform ="translateX(57px)";
+						document.getElementById('leftTxt').style.fontSize ="27px";
+					}
+					if (ll == 8){
+						document.getElementById('leftTxt').style.transform ="translateX(45px)";
+						document.getElementById('leftTxt').style.fontSize ="22px";
+					}
+					if (ll == 11){
+						document.getElementById('leftTxt').style.transform ="translateX(44px)";
+						document.getElementById('leftTxt').style.fontSize ="16px";
+					}
+					if (ll == 7){
+						document.getElementById('leftTxt').style.transform ="translateX(35px)";
+						document.getElementById('leftTxt').style.fontSize ="27px";
+					}
+					if (ll == 12){
+						document.getElementById('leftTxt').style.transform ="translateX(10px)";
+						document.getElementById('leftTxt').style.fontSize ="25px";
+					}
+				//right menu
+					if (rl == 7){
+						document.getElementById('rightTxt').style.transform ="translateX(45px)";
+						document.getElementById('rightTxt').style.fontSize ="25px";
+					}
+					if (rl == 9){
+						document.getElementById('rightTxt').style.transform ="translateX(50px)";
+						document.getElementById('rightTxt').style.fontSize ="18px";
+					}
+					if (rl == 6){
+							document.getElementById('rightTxt').style.transform ="translateX(47px)";
+							document.getElementById('rightTxt').style.fontSize ="27px";
+						}
+					if (rl == 8){
+						document.getElementById('rightTxt').style.transform ="translateX(25px)";
+						document.getElementById('rightTxt').style.fontSize ="27px";
+					}
+					if (rl == 5){
+						document.getElementById('rightTxt').style.transform ="translateX(51px)";
+						document.getElementById('rightTxt').style.fontSize ="27px";
+					}
+				//bottom menu
+					if (bl == 8){
+						document.getElementById('bottomTxt').style.transform ="translateX(31px)";
+						document.getElementById('bottomTxt').style.top ="78px";
+						document.getElementById('bottomTxt').style.fontSize ="21px";
+					}
+					if (bl == 6){
+						document.getElementById('bottomTxt').style.transform ="translateX(33px)";
+						document.getElementById('bottomTxt').style.top ="78px";
+						document.getElementById('bottomTxt').style.fontSize ="27px";
+					}
+					if (bl == 7){
+						document.getElementById('bottomTxt').style.transform ="translateX(29px)";
+						document.getElementById('bottomTxt').style.top ="78px";
+						document.getElementById('bottomTxt').style.fontSize ="25px";
+					}
+					if (bl == 12){
+						document.getElementById('bottomTxt').style.transform ="translateX(33px)";
+						document.getElementById('bottomTxt').style.textAlign = "center";
+						document.getElementById('bottomTxt').style.top ="70px";
+						document.getElementById('bottomTxt').style.fontSize ="23px";
+					}
+					if (bl == 9){
+						document.getElementById('bottomTxt').style.transform ="translateX(9px)";
+						document.getElementById('bottomTxt').style.fontSize ="27px";
+					}
+					if (bl == 11){
+						document.getElementById('bottomTxt').style.transform ="translateX(17px)";
+						document.getElementById('bottomTxt').style.top ="74px";
+						document.getElementById('bottomTxt').style.fontSize ="27px";
+					}
+					if (bl == 13){
+						document.getElementById('bottomTxt').style.transform ="translateX(27px)";
+						document.getElementById('bottomTxt').style.textAlign = "center";
+						document.getElementById('bottomTxt').style.top ="72px";
+						document.getElementById('bottomTxt').style.fontSize ="20px";
+					}
+
+				}
+	}
+	function textColor(changer){
+		if (changer==1){
+			if(menuOpen==0){
+				document.getElementById('lanxbox').style.color = '#22CB00';
+			}
+			
+		}
+		if(changer==0){
+			document.getElementById('lanxbox').style.color ='black';
+		}
+	}
+	function loadingEveything(){
+		screenSize();
+		subMenuBlink();
+		// document.getElementById('contents').src = "";
+	}
+	function screenSize(){
+		// var screenWidth = screen.width;
+		// var screenHeight = screen.height;
+		// var bfw = screenWidth -6 + "px";
+		// var bbw = screenWidth + "px";
+		// if(screenWidth>450){
+		// 	var ch = screenHeight - 287 + "px";
+		// 	document.getElementById('contnent').style.top ="170px";
+		// }
+		// else if (screenWidth<=450){
+		// 	var ch = screenHeight - 131 + "px";
+		// 	document.getElementById('contnent').style.top ="125px";
+		// }
+		// // document.getElementById('barfront').style.width = bfw;
+		// // document.getElementById('barback').style.width = bbw;
+		// console.log(bfw);
+		// resize();	
+		// // document.getElementById('contnent').style.width = bfw;
+		// document.getElementById('contnent').style.height = ch;
+
+	}
+	function openSearch(){
+		if (seeOpen==false){
+			document.getElementById('searched').style.display="inline";
+			seeOpen=true;
+			closeMain();
+			closecontact();
+		}
+		else if (seeOpen==true){
+			closeSearch();
+
+		}
+	}
+	function closeSearch(){
+		document.getElementById('searched').style.display="none";
+			seeOpen=false;
+	}
+	function closeAll(){
+			closeMain();
+			closecontact();
+			closeSearch();
+	}
+
+</script>
+<script type="text/javascript">
+	function lPage(ev){
+		inject('contnent',pagenl[x]);
+		closeAll();
+	}
+	function bPage(ev){
+		inject('contnent',pagenb[x]);
+		closeAll();
+		console.log('bottom click success');
+	}
+	function rPage(ev){
+		inject('contnent',pagenr[x])
+		closeAll();
+		console.log('right click success');
+	}
+</script>
+<script type="text/javascript" src="ajax.js"></script>
+<style>
+	#topness{
+		position: fixed;
+		width: 100%;
+	}
+
+	#lanxtitle{
+		display: none;
+	}
+	body{
+		background-size: 80%;
+		background-image: url("images/background/hex.png");
+		opacity: 100%;
+		overflow-x: hidden;
+		
+	}
+	*{
+			margin: 0px;
+			padding: 0px;
+			font-family: Olorontryout;
+
+	}
+	@font-face {
+		    font-family: Technojap;
+		    src: url(fonts/tecnojap.ttf);
+		    font-style: normal;
+		    font-weight:200;
+	}
+	@font-face {
+		    font-family: Olorontryout;
+		    src: url(fonts/olorontryout.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+	}
+	@font-face {
+		    font-family: AgencyFB;
+		    src: url(fonts/agencyfb.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+	}
+	h4{
+
+		font-family: Technojap;
+		font-size: 38px;
+	}
+		#heads{
+				position: absolute;
+				left: 25px;
+				top: 20px;
+			}
+			#heads2{
+				position: absolute;
+				filter: blur(3px);
+				left: 25px;
+				top: 20px;
+			}
+
+			#leftTxt{
+				position: absolute;
+				top: 65px;
+				text-align: center;
+				/*transform: translateX(55px);
+	*/			font-size: 30px;
+				color: rgb(205,92,92)
+			}
+		#rightTxt{
+			position: absolute;
+				top: 65px;
+				text-align: center;
+				/*transform: translateX(37px);*/
+				font-size: 30px;
+				color: rgb(205,92,92);
+			}
+		#bottomTxt{
+			position: absolute;
+				top: 75px;
+				text-align: center;
+				/*transform: translateX(9px);*/
+				font-size: 30px;
+				color: rgb(205,92,92)
+			}
+	/*#contnent{
+		background-color: rgba(0,255,0,0.1);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		left:0px;
+		top: 170px;
+		overflow-x: hidden;
+	}
+	#contents{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 1;	
+	}
+	*/
+	#searchIcon{
+		opacity: 0.6;
+		transform: translateY(4px) scale(.8);
+	}
+	#rightback{
+		filter: blur(5px);
+	}
+	#bottomback{
+		filter: blur(5px);
+	}
+	#leftback{
+		filter: blur(5px);
+	}
+	#rf{
+		box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+	}
+	#bf{
+		box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+	}
+	#lf{
+		box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+	}
+	
+	@media screen and (min-device-width: 451px) and (max-device-width: 8000px){
+		#media{
+			font-size: 20px;
+			position: absolute;
+			left:50%;
+			transform: translateX(-30px);
+			top: 50px;
+		}
+		#tele{
+			position: absolute;
+			top:80px;
+			left:91%;
+			transform: rotateZ(-135deg);
+			font-size: 40px;
+			filter: blur(3px);
+			color:red;
+			animation-duration: .85s;
+			animation-fill-mode: forwards;
+
+		}
+		#contnent{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+			left:0px;
+			top: 170px;
+			overflow-x: hidden;
+	}
+		#contents{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			opacity: 1;	
+	}
+	}
+
+	@media screen and (min-device-width: 300px) and (max-device-width: 450px){
+		#contnent{
+		background-color: rgba(0,255,0,0.1);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		left:0px;
+		top: 125px;
+		overflow-x: hidden;
+	}
+	#media{
+			font-size: 15px;
+			position: absolute;
+			left:50%;
+			transform: translateX(-22px);
+			top: 50px;
+		}
+	#contents{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 1;	
+	}
+	}
+
+		
+
+</style>
+</head>
+<body onload="loadingEveything()" onresize="screenSize()" >
+	<div id="contnent" >
+		<embed id="contents" src="one_offs.php" onclick="closeAll()"></embed>
+	</div>
+	<header>
+		<div id="topness">
+			<div id="conMenu" class="contact">
+				<svg height="150" width="150" class="contact" id="sgb">
+					<polygon points="0,0,150,0,150,130,130,150,20,150,0,130"style="fill:black;stroke:black;stroke-width:1"  />
+				</svg>
+				<svg height="150" width="150" class="contact" id= "sg">
+					<polygon points="2,2,148,2,148,130,128,148,22,148,2,130"style="fill:white;stroke:white;stroke-width:0" />
+				</svg>
+				<div id="heading"class="contact" class="cont">Contact&nbspus</div>
+				<div id="heading2"class="contact" class="cont">Contact&nbspus</div>
+					<div id="divider" class="contact">
+						<svg height="10" width="125">
+				  			<line x1="5" y1="0" x2="125" y2="0" style="stroke:rgb(100,100,100);stroke-width:1" />
+						</svg>
+					</div>
+					<div id="phoneicon"class="contact">
+						<a href="tel://+61411795439" id=""><i class="fa fa-phone"></i></a>
+					</div>
+					<div id="phone"class="contact">
+						<a href="tel://+61411795439" id="no">&#43;61&nbsp;411&nbsp;795&nbsp;439</a>
+					</div>
+					<div id="envelope"class="contact">
+						<address id="">
+							<a href="mailto:info@lanxmedia.com"><i class="fas fa-envelope-open"></i></a>
+						</address>
+					</div>
+					<div id="email"class="contact">
+						<address id="emailAddress">
+							<a href="mailto:info@lanxmedia.com">info@lanxmedia.com</a>
+						</address>
+					</div>
+		</div>
+		<div id="searched" class="search">
+			<div id="backdrop" class="search">
+				<svg height="35" width="300" class="search" id="sjg">
+					<polygon points="0,0,298,3,298,18,273,33,39,33,27,33,2,20"style="fill:#000000;stroke:black;stroke-width:1" />
+				</svg>
+				<svg height="35" width="300" class="search" id="sjgb">
+					<polygon points="2,3,298,3,298,18,273,33,39,33,27,33,2,20"style="fill:#DDDDDD;stroke:white;stroke-width:1" />
+				</svg>
+			</div>
+			<div id="backdrop2" class="search"></div>
+			<div id="backdrop3" class="search"></div>
+			<div id="searchbar" class="search">
+				<input type="text" placeholder="Search..." id="searching"/>
+			</div>
+			<div id="searchbar2" class="search"></div>
+			<div id="go" class="search" onmousedown="goGrey(1)" onmouseup="goGrey(0)" ></div>
+		</div>
+		<div id="bar_heading" onclick="closeAll()">
+			<div id="barback" onclick="closeAll()"></div>
+			<div id="barfront" onclick="closeAll()"></div>
+		</div>
+
+		<div id="mainmenu" class="topm" >
+
+			<svg height="166" width="177" id="lanxback"  >
+				<polygon  points="40,0,137,0,177,88,88.5,166,0,88"style="stroke:black;stroke-width:0" class="menu" id="lb" onclick="openMain(0)" class="topm" onmouseenter="textColor(1)" onmouseleave="textColor(0)"/>
+			</svg>
+			<svg height="166" width="177" id="lanxfront" >
+				<polygon  points="44,4,133,4,171,88,88.5,160,6,88"style="fill:#FFFFFF;stroke:white;stroke-width:0;" class="menu" onclick="openMain(0)" class="topm" onmouseenter="textColor(1)" onmouseleave="textColor(0)"/>
+
+			</svg>
+			<div id="lanxbox" class="menu" onclick="openMain(0)" onmouseenter="textColor(1)" onmouseleave="textColor(0)"><h4 id="lanx">lanx</h4><p id="media">media</p><p id="heads"></p><p id="heads2"></p></div>
+		</div>
+		<div id="leftmenu" >
+			<svg height="158" width="196" id="leftfront" >
+					<polygon  points="48.5,0,139.5,0,188,79,139.5,158,48.5,158,0,79"style="fill:#000000;stroke:black;stroke-width:0;" class="menu"  onclick="openMain(1)"  onmouseenter="subMenuHover(1)" onmouseout="subMenuHover(4)" id="lf"/>
+				</svg>
+				<svg height="158" width="196" id="leftback" >
+					<polygon  points="50.5,4,137.5,4,184,79,137.5,154,50.5,154,4,79" style="fill:#FFFFFF;stroke:white;stroke-width:0" class="menu" onclick="openMain(1)" onmouseenter="subMenuHover(1)" onmouseout="subMenuHover(4)" />
+				</svg>
+				
+				<div id="leftTxt" class="leftBox" onclick="openMain(1)" class="menu" onmouseenter="subMenuHover(1)" onmouseout="subMenuHover(4)"></div> <!-- open main = 1 -->
+		</div>
+		<div id="rightmenu" >
+			<svg height="158" width="196" id="rightfront" >
+					<polygon  points="48.5,0,139.5,0,188,79,139.5,158,48.5,158,0,79"style="fill:#000000;stroke:black;stroke-width:0;" class="menu" onclick="openMain(2)"  onmouseenter="subMenuHover(2)" onmouseout="subMenuHover(4)"id="rf"/>
+				</svg>
+				<svg height="158" width="196" id="rightback" >
+					<polygon  points="50.5,4,137.5,4,184,79,137.5,154,50.5,154,4,79" style="fill:#FFFFFF;stroke:white;stroke-width:0;" class="menu" onclick="openMain(2)" onmouseenter="subMenuHover(2)" onmouseout="subMenuHover(4)"/>
+				</svg>
+				
+				<div id="rightTxt" class="rightBox" onclick="openMain(2)" class="menu" onmouseenter="subMenuHover(2)" onmouseout="subMenuHover(4)" ></div><!-- open main = 2 --><!-- open main = 2 -->
+		</div>
+		<div id="bottommenu" >
+				
+				<svg height="180" width="160" id="bottomfront" >
+					<polygon  points="80,0,160,48.5,160,131.5,80,180,0,131.5,0,48.5"style="fill:#000000;stroke:black;stroke-width:0;" class="menu" onclick="openMain(3)" onmouseenter="subMenuHover(0)" onmouseout="subMenuHover(4)" id="bf"/>
+				</svg>
+				<svg height="180" width="160" id="bottomback" >
+					<polygon  points="80,4,156,50.5,156,130.5,80,176,4,130.5,4,50.5" style="fill:#FFFFFF;stroke:white;stroke-width:0" class="menu" onclick="openMain(3)" onmouseenter="subMenuHover(0)" onmouseout="subMenuHover(4)" />
+				</svg>
+				<div id="bottomTxt" class="bottomBox" onclick="openMain(3)"  class="menu" onmouseenter="subMenuHover(0)" onmouseout="subMenuHover(4)" ></div><!-- open main = 3 -->
+		</div>
+		
+		<i class="fa fa-phone" id="tele" class="contact" class="menu"></i>
+		<i class="fa fa-phone" id="telephone" class="contact" class="menu" onclick="contactOpen()"></i>
+		<div id="searchIcon" class="search" onclick="openSearch()"></div>
+
+		</div>
+		
+	</header>
+	
+</body>
+
+</html>

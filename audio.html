@@ -1,0 +1,389 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	
+		
+	<title></title>
+	<script></script>
+	<style>
+		body{
+			
+			background-size:  cover;
+			overflow-x: hidden;
+			font-family:  AgencyFB;
+		}
+		.large{
+			font-family: Technojap;
+		}
+
+		#art_photo{
+			margin-top: 0px;
+			margin-left: 0px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 45%;
+			height: 55%;
+		}
+		#art_dec{
+			margin-top: 0px;
+			margin-right: 0px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+			position: absolute;
+			top: 0%;
+			left: 50%;
+			width: 48%;
+			height: 30%;
+		}
+		#art_player{
+			margin-top: 0px;
+			margin-right: 0px;
+			border-width: 2px;
+			border-style: solid;
+			border-color: black;
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			width: 48%;
+			height: 60%;
+		}
+
+		/*footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-290px);
+			width: 120%;
+			height: 150px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}*/
+
+		#homebtn{
+			background-image: url("images/icon/download.png");
+			background-size: cover;
+			position: absolute;
+			left: 80%;
+			top: 50px;
+			width: 50px;
+			height: 50px;
+		}
+		#homebtn:hover{
+			cursor: pointer;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-285px);
+		}
+		#under{
+			position: absolute;
+			transform: translateY(-25px) translateX(70px);
+			font-family: Olorontryout;
+		}
+		#play_btn{
+			position: absolute;
+			top: 0%;
+			left: 25%;
+			height: 100px;
+			width: 50%;
+			border-width: 1px;
+			border-style: solid;
+			border-color: black;
+			background-color: rgba(0,0,0,0.8);
+
+		}
+		#play_lst{
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			height: 100px;
+			width: 25%;
+			border-width: 1px;
+			border-style: solid;
+			border-color: black;
+			background-color: rgba(0,0,0,0.8);
+		}
+		.large{
+			font-size: 35px;
+		}
+		.blurb{
+			font-size: 18px;
+
+		}
+		.media_btn{
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-100px) translateY(-50px);
+		}
+	@font-face {
+		    font-family: Technojap;
+		    src: url(fonts/tecnojap.ttf);
+		    font-style: normal;
+		    font-weight:200;
+	}
+	@font-face {
+		    font-family: Olorontryout;
+		    src: url(fonts/olorontryout.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+	}
+	@font-face {
+		    font-family: AgencyFB;
+		    src: url(fonts/agencyfb.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+	}
+	@media screen and (min-device-width: 1501px) and (max-device-width: 8000px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+	}
+	@media screen and (min-device-width: 1201px) and (max-device-width: 1500px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-230px);
+		}
+	}
+	@media screen and (min-device-width: 1001px) and (max-device-width: 1200px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-190px);
+		}
+	}
+	@media screen and (min-device-width: 801px) and (max-device-width: 1000px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-180px);
+		}
+	}
+	@media screen and (min-device-width: 701px) and (max-device-width: 800px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-170px);
+		}
+	}
+	@media screen and (min-device-width: 451px) and (max-device-width: 700px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-305px);
+			width: 120%;
+			height: 130px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			text-align: center;
+			transform: translateX(-170px);
+		}
+	}
+	@media screen and (min-device-width: 300px) and (max-device-width: 450px){
+		footer{
+			position: absolute;
+			top: 100%;
+			transform: translateY(-220px);
+			width: 120%;
+			height: 90px;
+			background-color: #FFFFFF;
+			left:-10px;
+			box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			font-family: AgencyFB;
+		}
+		#homebtn{
+			background-image: url("images/icon/download.png");
+			background-size: cover;
+			position: absolute;
+			left: 80%;
+			top: 50px;
+			width: 50px;
+			height: 50px;
+		}
+		#homebtn:hover{
+			cursor: pointer;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			top: -20px;
+			text-align: center;
+			transform: translateX(-100px);
+		}
+		#under{
+			position: absolute;
+			font-size: 15px;
+			transform: translateY(-25px) translateX(40px);
+			font-family: Olorontryout;
+		}
+		.large{
+			font-size: 30px;
+
+
+		}
+		.blurb{
+			font-size: 12px;
+
+		}
+		.privacy-policy{
+			font-size: 10px;
+			top: 5px;
+		}
+
+	}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var bleep = new Audio();
+			bleep.src = "alive.mp3";
+	</script>
+	<div id="art_photo">
+	</div>
+	<div id="art_dec">
+	</div>
+	<div id="art_player">
+		<div id="play_lst"></div>
+		<div id="play_btn">
+			<svg height="100" width="200" id="btn_play" class="media_btn" >
+				<polygon  points="100,0,200,25,125,42,125,50,75,50,75,42,0,25"style="stroke:black;stroke-width:0.5;fill:grey;" onclick="bleep.play()"/ >
+			</svg>
+			<svg height="100" width="200"  class="media_btn">
+					<polygon  points="95,10,110,20,95,30"style="stroke:black;stroke-width:0.5;fill:black;" onclick="bleep.play()"/ >
+			</svg>
+
+			<svg height="100" width="200"   id="btn_pause" class="media_btn">
+				<polygon  points="100,100,200,75,125,58,125,50,75,50,75,58,0,75"style="stroke:black;stroke-width:0.5;fill:grey;" />
+			</svg>
+			<svg height="100" width="200"  class="media_btn">
+					<polygon  points="95,62.5,100,62.5,100,87.5,95,87.5"style="stroke:black;stroke-width:0.5;fill:black;"/ >
+			</svg>
+
+			<svg height="100" width="200"  class="media_btn">
+					<polygon  points="110,62.5,105,62.5,105,87.5,110,87.5"style="stroke:black;stroke-width:0.5;fill:black;"/ >
+			</svg>
+
+			<svg height="100" width="200"   id="btn_next" class="media_btn">
+				<polygon  points="200,25,125,42,125,58,200,75"style="stroke:black;stroke-width:0.5;fill:grey;" />
+			</svg>
+			<svg height="100" width="200"  class="media_btn">
+					<polygon  points="162.5,42,162.5,58,170.5,50,170.5,42,178.5,50,170.5,58,170.5,50"style="stroke:black;stroke-width:0.5;fill:black;"/ >
+			</svg>
+
+			<svg height="100" width="200"   id="btn_previous" class="media_btn">
+				<polygon  points="0,25,75,42,75,58,0,75"style="stroke:black;stroke-width:0.5;fill:grey;" />
+			</svg>
+			<svg height="100" width="200"  class="media_btn">
+					<polygon  points="37.5,42,37.5,58,29.5,50,29.5,42,21.5,50,29.5,58,29.5,50"style="stroke:black;stroke-width:0.5;fill:black;"/ >
+			</svg>
+
+		</div>
+	</div>
+
+<footer>
+	<div id="homebtn"></div>
+				 <div class="col-md-right" id="lalogo">
+				 	<div class="logo">
+				 		<div ><h1 class="large">Lanx</h1></div>
+				 		<div id = "under" class="small">media</div>
+				 	</div>
+				 	<div class="blurb">Your Ultra Quality Content Provider</div>
+				 	<div id="privacy" >
+				 		<a href="#" class="privacy-policy">Privacy Policy, Terms and Conditions</a>
+				 	</div>
+				 </div>
+				</div>
+</footer>
+	
+</body>
+
+</html>

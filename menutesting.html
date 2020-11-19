@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="apple-touch-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico"/>
+	
+		
+	<title></title>
+	<style>
+		body{
+			background-color: rgba(0,0,0,1);
+			background-size:  cover;
+			overflow-x: hidden;
+			font-family:  Olorontryout;
+			color: white
+		}
+
+		
+		#homebtn{
+			background-image: url("images/icon/download.png");
+			background-size: cover;
+			position: absolute;
+			left: 80%;
+			top: 50px;
+			width: 50px;
+			height: 50px;
+		}
+		#homebtn:hover{
+			cursor: pointer;
+		}
+		#lalogo{
+			position: absolute;
+			left: 50%;
+			text-align: center;
+			transform: translateX(-230px);
+		}
+		h1{
+			font-family: Technojap;
+		}
+		
+		@font-face {
+		    font-family: Technojap;
+		    src: url(fonts/tecnojap.ttf);
+		    font-style: normal;
+		    font-weight:200;
+		}
+		@font-face {
+		    font-family: Olorontryout;
+		    src: url(fonts/olorontryout.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+		}
+		@font-face {
+		    font-family: AgencyFB;
+		    src: url(fonts/agencyfb.ttf);
+		    font-style: normal;
+		    font-weight:bold;
+		}
+		.drag_menu{
+			display: inline-block;
+			position: absolute;
+			top: 25px;
+			left: 25px;
+
+		}
+		#cover{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+</head>
+<body>
+
+
+
+
+	<svg height="92.96" width="100" class="drag_menu" >
+		<polygon  points="24.64, 2.56, 74.48, 2.56, 95.6 49.28, 49.28, 89.6, 3.36, 49.28"style="fill:#FFFFFF;stroke:white;stroke-width:0;" class="drag"/>
+	</svg>
+
+
+
+	<script>
+		const el = document.querySelector(".drag");
+		const eh = document.querySelector(".drag_menu");
+		var screenWidth = screen.width;
+		var screenHeight = screen.height;
+		el.addEventListener('mousedown' , mousedown);
+		function mousedown(e){
+			window.addEventListener('mousemove', mousemove);
+			window.addEventListener('mouseup', mouseup);
+			let prevX = e.clientX;
+			let prevY = e.clientY;
+			let intialX = e.clientX;
+			let intialY = e.clientY;
+
+			function mousemove(e){
+				let newX = prevX - e.clientX;
+				let newY = prevY - e.clientY;
+
+				const rect = el.getBoundingClientRect();
+				if(prevY>50&&prevY<(screenHeight-75)){
+					eh.style.left = (prevX - 50) + "px";
+					eh.style.top = (prevY-50) + "px";
+				}
+				
+				prevX = e.clientX;
+				prevY = e.clientY;
+
+			}
+			function mouseup(){
+				window.removeEventListener("mousemove", mousemove);
+				window.removeEventListener("mouseup", mouseup);
+				if(prevY>(intialY-25)&&prevY<(intialY+25)){
+					if(prevX>(intialX-25)&&prevX<(intialX+25)){
+						el.style.fill = "#ff0000";
+					}
+				}
+				
+					if(prevX > (screenWidth/2)){
+						eh.style.left = screenWidth - 150 + "px";
+					}
+					else{
+						eh.style.left = 25 + "px";
+					}
+				
+				
+				
+			}
+		}
+	</script>
+	
+</body>
+
+</html>
