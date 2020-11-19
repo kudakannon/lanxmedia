@@ -1,0 +1,14 @@
+Audio(l4) visual(b4) marketing(r4) crew
+audio(l7) visual(b7) marketing(r4) one offs
+internships(l3) subcontracts(b3) perminant(r3)
+packages(l2) custom(r2)
+casestudies(b1) portfolio(r1)
+
+
+if(==){
+	document.getElementById().innerHTML.src = "casestudies.html";
+}
+
+Main page
+add the footer
+add the page changer
