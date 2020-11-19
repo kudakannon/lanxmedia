@@ -1,0 +1,378 @@
+@media screen and (min-device-width: 451px) and (max-device-width: 8000px){
+
+	.contact{
+		position: absolute;
+		left:91%;
+
+
+	}
+
+	#conMenu{
+		transform: translateX(55px);
+		opacity: 0;
+		display: none;
+		animation-name: openConn;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		top:87px;
+	}
+	@keyframes openConn{
+		from{
+			
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+			top: 165px;
+		}
+	}
+	#sg{
+
+		transform: translateX(-111px);
+		filter: blur(5px);
+	}
+
+
+	#sgb{
+
+		transform: translateX(-110px);
+		filter: blur(0px);
+	}
+
+	
+
+	#heading{
+		top:20px;
+		transform: translateX(-95px);
+		font-size: 20px;
+	}
+
+	#heading2{
+		top:20px;
+		transform: translateX(-95px);
+		font-size: 20px;
+		filter: blur(2px);
+	}
+
+	#divider{
+		top: 45px;
+		transform: translateX(-100px);
+		filter: blur(1px);
+	}
+
+	#phone{
+		top:65px;
+		transform: translateX(-70px);
+		font-size: 20px;
+
+	}
+
+	#phoneicon{
+		top:67px;
+		transform: translateX(-99px);
+		font-size: 20px;
+
+
+	}
+	#phoneicon a{
+		color: rgb(0,200,0);
+	}
+
+	#no{
+		font-size: 20px;
+		font-family: AgencyFB;
+	}
+	#phone a{
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+		color: rgb(0,200,0);
+		}
+
+	#email{
+		top:102px;
+		transform: translateX(-65px);
+		font-size: 30px;
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+	}
+	#email a{
+		
+		font-size: 16px;
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+		font-family: AgencyFB;
+		color: rgb(000,150,200);
+	}
+	#emailicon{
+		top:0px;
+	}
+	#envelope{
+		top:100px;
+		transform: translateX(-95px);
+	}
+	#envelope a{
+		color: rgb(000,150,200);
+	}
+	address{
+		font-size: 20px;
+		font-family: AgencyFB;
+		transform: translateX(-05px);
+	}	
+	#telephone{
+		position: absolute;
+		top:80px;
+		left:91%;
+		transform: rotateZ(-135deg);
+		font-size: 40px;
+		color: #808080;
+		animation-duration: .85s;
+		animation-fill-mode: forwards;
+
+		
+	}
+
+	#tele{
+		position: absolute;
+		top:80px;
+		left:91%;
+		transform: rotateZ(-135deg);
+		font-size: 40px;
+		filter: blur(3px);
+		color:red;
+		animation-duration: .85s;
+		animation-fill-mode: forwards;;
+
+		
+	}
+	@keyframes flipPhone{
+		0%{
+			
+			transform: rotateZ(-135deg);
+		}
+		100%{
+			transform: rotateZ(-40deg);
+		}
+		25%{
+			transform: rotateZ(5deg);
+		}
+			
+	}
+		@keyframes flipBack{
+		0%{
+			transform: rotateZ(5deg);
+			
+		}
+		100%{
+			transform: rotateZ(-135deg);
+		}
+			
+	}
+
+	@keyframes overGlow{
+		0%{
+			color: white;
+			
+		}
+		50%{
+			color: red;
+		}
+		100%{
+			color: white;
+			
+		}
+
+			
+	}
+	}
+@media screen and (min-device-width: 300px) and (max-device-width: 450px){
+		.contact{
+		position: absolute;
+		left:91%;
+
+
+	}
+
+	#conMenu{
+		transform: translateX(-10px);
+		opacity: 0;
+		display: none;
+		animation-name: openConn;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		top:87px;
+	}
+	@keyframes openConn{
+		from{
+			
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+			top: 115px;
+		}
+	}
+	#sg{
+
+		transform: translateX(-111px);
+		filter: blur(5px);
+	}
+
+
+	#sgb{
+
+		transform: translateX(-110px);
+		filter: blur(0px);
+	}
+
+	
+
+	#heading{
+		top:20px;
+		transform: translateX(-95px);
+		font-size: 20px;
+	}
+
+	#heading2{
+		top:20px;
+		transform: translateX(-95px);
+		font-size: 20px;
+		filter: blur(2px);
+	}
+
+	#divider{
+		top: 45px;
+		transform: translateX(-100px);
+		filter: blur(1px);
+	}
+
+	#phone{
+		top:65px;
+		transform: translateX(-70px);
+		font-size: 20px;
+
+	}
+
+	#phoneicon{
+		top:67px;
+		transform: translateX(-99px);
+		font-size: 20px;
+
+
+	}
+	#phoneicon a{
+		color: rgb(0,200,0);
+	}
+
+	#no{
+		font-size: 20px;
+		font-family: AgencyFB;
+	}
+	#phone a{
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+		color: rgb(0,200,0);
+		}
+
+	#email{
+		top:102px;
+		transform: translateX(-65px);
+		font-size: 30px;
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+	}
+	#email a{
+		
+		font-size: 16px;
+		font-style: normal;
+		text-decoration: none;
+		text-decoration-style: none;
+		font-family: AgencyFB;
+		color: rgb(000,150,200);
+	}
+	#emailicon{
+		top:0px;
+	}
+	#envelope{
+		top:100px;
+		transform: translateX(-95px);
+	}
+	#envelope a{
+		color: rgb(000,150,200);
+	}
+	address{
+		font-size: 20px;
+		font-family: AgencyFB;
+		transform: translateX(-05px);
+	}	
+	#telephone{
+		position: absolute;
+		top:55px;
+		left:82%;
+		transform: rotateZ(-135deg);
+		font-size: 40px;
+		color: #808080;
+		animation-duration: .85s;
+		animation-fill-mode: forwards;
+
+		
+	}
+
+	#tele{
+		position: absolute;
+		top:55px;
+		left:82%;
+		transform: rotateZ(-135deg);
+		font-size: 40px;
+		filter: blur(5px);
+		color:red;
+		animation-duration: .85s;
+		animation-fill-mode: forwards;
+
+		
+	}
+	@keyframes flipPhone{
+		0%{
+			
+			transform: rotateZ(-135deg);
+		}
+		100%{
+			transform: rotateZ(-40deg);
+		}
+		25%{
+			transform: rotateZ(5deg);
+		}
+			
+	}
+		@keyframes flipBack{
+		0%{
+			transform: rotateZ(5deg);
+			
+		}
+		100%{
+			transform: rotateZ(-135deg);
+		}
+			
+	}
+
+	@keyframes overGlow{
+		0%{
+			color: white;
+			
+		}
+		50%{
+			color: red;
+		}
+		100%{
+			color: white;
+			
+		}
+
+			
+	}	
+
+}

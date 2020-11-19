@@ -1,0 +1,91 @@
+	@media screen and (min-device-width: 551px) {
+
+	.search{
+		position: absolute;
+		}
+
+	#searched{
+		display: none;
+		opacity: 0;
+		animation-name: opensearch;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes opensearch{
+		from{
+			opacity: 0;
+			top:155px;
+		}
+		to{
+			opacity: 1;
+			top:175px;
+		}
+	}
+	
+	#searchbar{
+		top:4px;
+		transform: translateX(27px);
+
+		
+	}
+	#searching{
+		transform: translateX(3px);
+		height:25px;
+		border-style: none;
+		width: 266px;
+		background-color: rgba(255,255,255,0);
+		padding-left:4px;
+		font-size: 20px;
+		font-family: AgencyFB;
+	}
+	#sjg{
+		transform: translateX(15px) scale(1.1);
+	}
+	#sjgb{
+		top:0px;
+		filter: blur(2px);
+		transform: translateX(15px) scale(1.1);
+	}
+	#backdrop2{
+		height: 25px;
+		width: 270px;
+		background-color: black;
+		top:4px;
+		transform: translateX(30px);
+	}
+	#backdrop3{
+		height: 21px;
+		width: 267px;
+		background-color: white;
+		top:6px;
+		transform: translateX(31px);
+		filter: blur(2px);
+	}
+	#go{
+		border-left: 18px solid black;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		width:0px;
+		height:0px;
+		top:5px;
+		transform: translateX(302px);
+	}
+	#go:hover{
+		cursor: pointer;
+		border-left: 18px solid #22CB00;
+
+	}
+	#searchIcon{
+		background-image: url('si.png');
+		left:5%;
+		top:70px;
+		height: 50px;
+		width: 52px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		opacity: 0;
+		display: inline;
+	}
+}
+
+

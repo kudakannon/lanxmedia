@@ -1,0 +1,628 @@
+	#barback{
+				background-color: white;
+				width: 100%;
+				height: 150px;
+				position: absolute;
+				left: 0px;
+				top: 25px;
+				box-shadow: 0 0px 10px 2.5px rgba(0, 0, 0, 0.75), 0 0px 10px 2.5px rgba(0, 0, 0, 0.75);
+			}
+	#barfront{
+				background-color: white;
+				width: 100%;
+				height: 140px;
+				position: absolute;
+				left: 4px;
+				top: 30px;
+				filter: blur(8px);
+			}
+	#mainmenu{
+			position: absolute;
+			width: 177px;
+			height: 166px;
+			left:50%;
+			top: 20px;
+			transform: translateX(-88.5px);
+			}
+	#lanxfront{
+			position: absolute;
+			filter: blur(5px);
+			}
+	#lanxback{
+			position: absolute;			
+			}
+	#lb{
+			animation-name: pulse;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			}
+		@keyframes pulse{
+			from{
+				fill: #000000;
+			}
+			to{
+				fill: #22CB00;
+			}
+		}
+		@keyframes nothing{
+			from{
+				
+			}
+			to{
+				
+			}
+		}
+	.menu:hover{
+			cursor: pointer;
+			}
+	#leftmenu{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-88px);
+			top: 125px;
+			display: none;
+			opacity: 0;
+			animation-name: slideleft;
+			animation-delay: .25s;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			}
+			@keyframes slideleft{
+				from{
+					transform: translateX(-88px);
+					opacity: 0;
+				}
+				to{
+					transform: translateX(-243px);
+					opacity: 1;
+				}
+			}
+			@keyframes blink{
+				0%{
+					fill: #000000;
+				}
+				50%{
+					fill: #DA0000;
+				}
+				100%{
+					fill: #000000;
+				}
+			}
+
+	#leftback{
+			position: absolute;
+			left: 0px;
+			filter: blur(5px);
+			
+			}
+	#leftfront{
+			position: absolute;
+			left: 0px;
+			
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			
+			}
+			#lf{
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			}
+	#rightmenu{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-88px);
+			top: 125px;
+			display: none;
+			opacity: 0;
+			animation-name: slideright;
+			animation-delay: .25s;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			}
+			@keyframes slideright{
+				from{
+					transform: translateX(-88px);
+					opacity: 0;
+				}
+				to{
+					transform: translateX(54px);
+					opacity: 1;
+				}
+			}
+	#rightback{
+			position: absolute;
+			filter: blur(5px);
+			}
+	#rightfront{
+			position: absolute;
+			
+			
+			}
+			#rf{
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			}
+	#bottommenu{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-80px);
+			top: 116px;
+			display: none;
+			opacity: 0;
+			animation-name: slidebottom;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			}
+			@keyframes slidebottom{
+				from{
+					top:141px;
+					opacity: 0;
+				}
+				to{
+					top: 260px;
+					opacity: 1;
+				}
+			}
+	#bottomback{
+			position: absolute;
+			left: 0px;
+			filter: blur(5px);
+			transform: scale(1.05);
+			
+			}
+	#bottomfront{
+			position: absolute;
+			transform: scale(1.05);
+			
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			}
+			#bf{
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			}
+	#leftTxt{
+			position: absolute;
+			top: 65px;
+			text-align: center;
+			/*transform: translateX(55px);
+*/			font-size: 30px;
+			color: rgb(25,92,92)
+		}
+	#rightTxt{
+		position: absolute;
+			top: 65px;
+			text-align: center;
+			/*transform: translateX(37px);*/
+			font-size: 30px;
+			color: rgb(205,92,92);
+		}
+	#bottomTxt{
+		position: absolute;
+			top: 75px;
+			text-align: center;
+			/*transform: translateX(9px);*/
+			font-size: 30px;
+			color: rgb(205,92,92)
+		}
+	#lanxbox {
+		  color: black;
+		  font-size: 19px;
+		  position: absolute;
+		  transform: translateX(20px);
+		  top:40px;
+		  height: 166px;
+		  width: 177px;
+		}
+	#media{
+		position: absolute;
+		left:50%;
+		transform: translateX(-30px);
+		top: 50px;
+	}
+	#lanx{
+		position: absolute;
+		top:10px;
+		left:5px;
+	}
+	#lanxbox{
+
+		position: absolute;
+		height: 50px;
+		width: 130px;
+	}
+@media screen and (min-device-width: 350px) and (max-device-width: 450px){
+	#lanxbox{
+			position: absolute;
+			top: 20px;
+		}
+		#lanx{
+			font-size: 29px;
+			left: 20px;
+			top: 20px;
+		}
+		#barback{
+				background-color: white;
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				left: 0px;
+				top: 25px;
+			}
+	#barfront{
+				background-color: white;
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				left: 4px;
+				top: 30px;
+				filter: blur(8px);
+			}
+	#mainmenu{
+				position: absolute;
+				width: 177px;
+				height: 166px;
+				left:50%;
+				top: 15px;
+				transform: translateX(-88.5px);
+				}
+		#lanxfront{
+				position: absolute;
+				top:-20px;
+				filter: blur(5px);
+				transform: scale(0.7);
+				}
+		#lanxback{
+				position: absolute;	
+				top:-20px;
+				transform: scale(0.7);		
+				}
+		#lb{
+				animation-name: pulse;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				}
+			@keyframes pulse{
+				from{
+					fill: #000000;
+				}
+				to{
+					fill: #22CB00;
+				}
+			}
+			@keyframes nothing{
+				from{
+					fill: #000000;
+				}
+				to{
+					fill:#000000;
+				}
+			}
+	.menu:hover{
+			cursor: pointer;
+			}
+	#leftmenu{
+					position: absolute;
+					left: 50%;
+					transform: translateX(-88px);
+					top: 75px;
+					display: none;
+					opacity: 0;
+					animation-name: slideleft;
+					animation-delay: .25s;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					}
+					@keyframes slideleft{
+						from{
+							transform: translateX(-88px);
+							opacity: 0;
+						}
+						to{
+							transform: translateX(-208px);
+							opacity: 1;
+						}
+					}
+
+			#leftback{
+					position: absolute;
+					left: 0px;
+					filter: blur(5px);
+					transform: scale(.7);
+					
+					}
+			#leftfront{
+					position: absolute;
+					left: 0px;
+					transform: scale(.7);
+					}
+	#rightmenu{
+					position: absolute;
+					left: 50%;
+					transform: translateX(-88px);
+					top: 75px;
+					display: none;
+					opacity: 0;
+					animation-name: slideright;
+					animation-delay: .25s;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					}
+					@keyframes slideright{
+						from{
+							transform: translateX(-88px);
+							opacity: 0;
+						}
+						to{
+							transform: translateX(15px);
+							opacity: 1;
+						}
+					}
+			#rightback{
+					position: absolute;
+					transform: scale(0.7);
+					filter: blur(5px);
+					
+					}
+			#rightfront{
+					position: absolute;
+					transform: scale(0.7);
+					
+			}
+	#bottommenu{
+				position: absolute;
+				left: 50%;
+				transform: translateX(-80px);
+				top: 116px;
+				display: none;
+				opacity: 0;
+				animation-name: slidebottom;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				}
+				@keyframes slidebottom{
+					from{
+						top:141px;
+						opacity: 0;
+					}
+					to{
+						top: 170px;
+						opacity: 1;
+					}
+				}
+		#bottomback{
+				position: absolute;
+				left: 0px;
+				filter: blur(5px);
+				transform: scale(0.75);
+				
+				}
+		#bottomfront{
+				position: absolute;
+				transform: scale(0.75);
+			}
+	#leftTxt{
+			position: absolute;
+			top: 65px;
+			/*transform: translateX(55px);
+*/			font-size: 30px;
+			color: rgb(205,92,92)
+		}
+	#rightTxt{
+		position: absolute;
+			top: 65px;
+			/*transform: translateX(37px);*/
+			font-size: 30px;
+			color: rgb(205,92,92);
+		}
+	#bottomTxt{
+		position: absolute;
+			top: 75px;
+			/*transform: translateX(9px);*/
+			font-size: 30px;
+			color: rgb(205,92,92)
+		}
+	
+
+}
+@media screen and (min-device-width: 200px) and (max-device-width: 359px){
+		#lanxbox{
+			position: absolute;
+			top: 20px;
+		}
+		#lanx{
+			font-size: 29px;
+			left: 20px;
+			top: 20px;
+		}
+		#barback{
+				background-color: white;
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				left: 0px;
+				top: 25px;
+			}
+	#barfront{
+				background-color: white;
+				width: 100%;
+				height: 90px;
+				position: absolute;
+				left: 4px;
+				top: 30px;
+				filter: blur(8px);
+			}
+	#mainmenu{
+				position: absolute;
+				width: 177px;
+				height: 166px;
+				left:50%;
+				top: 15px;
+				transform: translateX(-88.5px);
+				}
+		#lanxfront{
+				position: absolute;
+				top:-20px;
+				filter: blur(5px);
+				transform: scale(0.7);
+				}
+		#lanxback{
+				position: absolute;	
+				top:-20px;
+				transform: scale(0.7);		
+				}
+		#lb{
+				animation-name: pulse;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				}
+			@keyframes pulse{
+				from{
+					fill: #000000;
+				}
+				to{
+					fill: #22CB00;
+				}
+			}
+			@keyframes nothing{
+				from{
+					fill: #000000;
+				}
+				to{
+					fill:#000000;
+				}
+			}
+
+	.menu:hover{
+			cursor: pointer;
+			}
+	#leftmenu{
+					position: absolute;
+					left: 50%;
+					transform: translateX(-88px);
+					top: 70px;
+					display: none;
+					opacity: 0;
+					animation-name: slideleft;
+					animation-delay: .25s;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					}
+					@keyframes slideleft{
+						from{
+							transform: translateX(-88px);
+							opacity: 0;
+						}
+						to{
+							transform: translateX(-193px);
+							opacity: 1;
+						}
+					}
+
+			#leftback{
+					position: absolute;
+					left: 0px;
+					filter: blur(5px);
+					transform: scale(.65);
+					
+					}
+			#leftfront{
+					position: absolute;
+					left: 0px;
+					transform: scale(.65);
+					}
+	#rightmenu{
+					position: absolute;
+					left: 50%;
+					transform: translateX(-88px);
+					top: 70px;
+					display: none;
+					opacity: 0;
+					animation-name: slideright;
+					animation-delay: .25s;
+					animation-duration: 1s;
+					animation-fill-mode: forwards;
+					}
+					@keyframes slideright{
+						from{
+							transform: translateX(-88px);
+							opacity: 0;
+						}
+						to{
+							transform: translateX(1px);
+							opacity: 1;
+						}
+					}
+			#rightback{
+					position: absolute;
+					transform: scale(0.65);
+					filter: blur(5px);
+					
+					}
+			#rightfront{
+					position: absolute;
+					transform: scale(0.65);
+					
+			}
+	#bottommenu{
+				position: absolute;
+				left: 50%;
+				transform: translateX(-80px);
+				top: 116px;
+				display: none;
+				opacity: 0;
+				animation-name: slidebottom;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				}
+				@keyframes slidebottom{
+					from{
+						top:141px;
+						opacity: 0;
+					}
+					to{
+						top: 160px;
+						opacity: 1;
+					}
+				}
+		#bottomback{
+				position: absolute;
+				left: 0px;
+				filter: blur(5px);
+				transform: scale(0.7);
+				
+				}
+		#bottomfront{
+				position: absolute;
+				transform: scale(0.7);
+			}
+	#leftTxt{
+			position: absolute;
+			top: 65px;
+			/*transform: translateX(55px);
+*/			font-size: 30px;
+			color: rgb(205,92,92)
+		}
+	#rightTxt{
+		position: absolute;
+			top: 65px;
+			/*transform: translateX(37px);*/
+			font-size: 30px;
+			color: rgb(205,92,92);
+		}
+	#bottomTxt{
+		position: absolute;
+			top: 75px;
+			/*transform: translateX(9px);*/
+			font-size: 30px;
+			color: rgb(205,92,92)
+		}
+	
+
+}
